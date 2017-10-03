@@ -1,0 +1,11 @@
+import tweepy
+#from tweepy.auth import OAuthHandler
+auth1=auth.OAuthHandler("S9ObY9ncL4B0O6pYssbDzqsxw","lSR3FT5TE4bn7k6YOSuhdwb8hUEBWT5i9dazft0mobTBWvP4g1")
+redirect_user(auth1.get_authorization_url())
+auth1.set_access_token("895596344919773184-1TYayl1xXv005t0E2Ou4MKb0CzEMw14","Q9yzqU7A1LJnkpXV8RVuXkx9BlPbA3acuOZOUhm4mWulu")
+api=tweepy.API(auth1)
+
+
+public_tweets = api.home_timeline()
+for tweet in public_tweets:
+    print (tweet.text)
