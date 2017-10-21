@@ -203,15 +203,17 @@ for (n,v) in G.successors((iterator,iterator_count)):
 	print("Word=%s Count=%d"%(n,v))
 """
 max_count=0
-summaries=[]
-for (n,v,const) in G.successors((root,words[root],0)):
+summaries_forward=[]
+for (n,v,const) in F.successors((root,words[root],0)):
 	count=v
 	summary=root+" "+n
-	l=G.successors((n,v,const))
+	l=F.successors((n,v,const))
 	while l!=[]:
 		summary=summary+" "+l[0][0]
 		count=count+l[0][1]
-		l=G.successors((l[0][0],l[0][1],l[0][2]))
+		l=F.successors((l[0][0],l[0][1],l[0][2]))
+	
+	summaries_forward.append((summary,count))
 		#graph_terminal=False
 	#print ("Word=%s Count=%d"%(max_word,max_count))
 	#tweet_summary.append((max_word,max_count))
@@ -219,8 +221,35 @@ for (n,v,const) in G.successors((root,words[root],0)):
 	#iterator_count=max_count
 	#if iterator=="":
 	#	graph_terminal=True
+
+summaries_backward=[]
+for (n,v,const) in G.successors((root,words[root],0)):
+	count=v
+	summary=n+" "+root
+	l=G.successors((n,v,const))
+	while l!=[]:
+		summary=l[0][0]+" "+summary
+		count=count+l[0][1]
+		l=G.successors((l[0][0],l[0][1],l[0][2]))
 	
-for n,v in tweet_summary:
-	print(n,end=" ")
-"""
-print()
+	summaries_backward.append((summary,count))
+
+max_weight=summaries_backward[0][1			]
+index=""
+final_summary=""
+for summary in summaries_backward:
+	if summary[1]>max_weight:
+		index=summary[0]
+		max_weight=summary[1]
+
+final_summary=final_summary+index
+
+max_weight=summaries_forward[0][1]
+index=""	
+for summary in summaries_forward:
+	if summary[1]>max_weight:
+		index=summary[0]
+		max_weight=summary[1]
+
+final_summary=final_summary+" "+index
+print(final_summary)
