@@ -6,6 +6,9 @@ from operator import itemgetter
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 import networkx as nx
 import matplotlib.pyplot as plt
+from graphviz import Digraph
+import math
+
 def null_intersection(a,b):
 	if(set(a) & set(b)) == set([]):
 		return True
@@ -17,7 +20,7 @@ root=""
 
 print("Loading dataset...")
 t0 = time()
-file_tweet = open("/home/kartik144/Documents/CMS/4-1/CS F366/clusters/ajaythakur","r")#"""("op.txt","r")"""
+file_tweet = open("/home/kartik144/Documents/CMS/4-1/CS F366/clusters/travelban","r")#"""("op.txt","r")"""
 dataset=[]
 s=file_tweet.readline()
 while s !='':
@@ -62,15 +65,25 @@ for i in range(0,n):
 print("done in %0.3fs." % (time() - t0))
 
 G=nx.DiGraph()
-G.add_node((root,words[root]))
+G.add_node((root,words[root],0))
 ################################################################### Backward Pass
+ident=1
 for data in data_samples:
 	tokens=nltk.word_tokenize(data)
 	edge_data=[]
+	count=1
 	for x in range(len(tokens)-1,-1,-1):
 	#	print(tokens[x],end=" ")
-		if tokens[x] in words.keys():# and words[x]>1:
-			edge_data.append((tokens[x],words[tokens[x]]))
+		if tokens[x]==root:
+			edge_data.append((tokens[x],words[tokens[x]],0))
+			continue
+		if tokens[x] in words:
+			edge_data.append((tokens[x],words[tokens[x]]-count*math.log2(words[tokens[x]]),ident))
+			count=count+1
+		else:
+			edge_data.append((tokens[x],0,ident))
+			count=count+1
+		ident=ident+1
 	#	print()
 	#print (data)
 	#print(edge_data)
@@ -78,7 +91,7 @@ for data in data_samples:
 		edges=[]
 		j=0
 		for i in range(0,len(edge_data)-1):
-			if j==0 and edge_data[i]!=(root,words[root]):
+			if j==0 and edge_data[i]!=(root,words[root],0):
 				continue
 			edges.append((edge_data[i],edge_data[i+1]))
 			j=1
@@ -86,19 +99,18 @@ for data in data_samples:
 		#P=nx.DiGraph()
 		for i in range(0,len(edges)):
 			e1,e2=edges[i]
-			n1,v1=e1
-			n2,v2=e2
-			if (edges[i] not in G) and (words[n1]>1 and words[n2]>1):
+			if (edges[i] not in G):# and (words[n1]>1 and words[n2]>1):
 				G.add_edge(e1,e2)
 		#G.add_edge(edge_data[i+1],(root,words[root]))
 		#nx.draw_networkx(G,edge_color='g',arrows=True)
 		#plt.show()
-		
-nx.draw_networkx(G,edge_color='g',arrows=True)
-plt.show()
+nx.drawing.nx_pydot.write_dot(G,"/home/kartik144/Documents/CMS/4-1/CS F366/Summarising microblogs Automatically/Graphs/g2.dot")		
+#nx.draw_networkx(G,edge_color='g',arrows=True)
+#plt.show()
 
 iterator=root
 iterator_count=words[iterator]
+
 graph_terminal=False
 tweet_summary=[]
 #tweet_summary.append((root,words[root]))
@@ -107,10 +119,14 @@ print("Word=%s Count=%d"%(iterator,iterator_count))
 for (n,v) in G.successors((iterator,iterator_count)):
 	print("Word=%s Count=%d"%(n,v))
 """
+
+		##REMOVE 
+"""		
 while graph_terminal==False:
 	#graph_terminal=True
-	max_count=0
-	max_word=""
+	#max_count=0
+	#max_word=""
+	count=0
 	for (n,v) in G.successors((iterator,iterator_count)):
 		if max_count<v  and n!=iterator:
 			max_count=v
@@ -131,18 +147,32 @@ for x in range(len(tweet_summary)-2,-1,-1):
 	n,v=tweet_summary[x]
 	print(n,end=" ")
 print()
+"""
 ###################################################################### Forward Pass
+F=nx.DiGraph()
+F.add_node((root,words[root],0))
+ident=1
 for data in data_samples:
 	tokens=nltk.word_tokenize(data)
 	edge_data=[]
+	count=1
 	for x in tokens:
-		if x in words.keys():# and words[x]>1:
-			edge_data.append((x,words[x]))
+		if x==root:
+			edge_data.append((x,words[x],0))
+			continue
+		if x in words.keys():
+			edge_data.append((x,words[x]-count*math.log2(words[x]),ident))
+			count=count+1
+		else:
+			edge_data.append((x,0,ident))
+			count=count+1
+		ident=ident+1
+	#print(edge_data)
 	if root in tokens:
 		edges=[]
 		j=0
 		for i in range(0,len(edge_data)-1):
-			if j==0 and edge_data[i]!=(root,words[root]):
+			if j==0 and edge_data[i]!=(root,words[root],0):
 				continue
 			edges.append((edge_data[i],edge_data[i+1]))
 			j=1
@@ -151,13 +181,16 @@ for data in data_samples:
 		for i in range(0,len(edges)):
 			if edges[i] not in G:
 				e1,e2=edges[i]
-				G.add_edge(e1,e2)
+				F.add_edge(e1,e2)
 		#G.add_edge(edge_data[i+1],(root,words[root]))
 		#nx.draw_networkx(G,edge_color='g',arrows=True)
 		#plt.show()
 		
-nx.draw_networkx(G,edge_color='g',arrows=True)
-plt.show()
+#nx.draw_networkx(G,edge_color='g',arrows=True)
+#plt.show()
+nx.drawing.nx_pydot.write_dot(F,"/home/kartik144/Documents/CMS/4-1/CS F366/Summarising microblogs Automatically/Graphs/f.dot")
+
+
 
 iterator=root
 iterator_count=words[iterator]
@@ -169,18 +202,16 @@ print("Word=%s Count=%d"%(iterator,iterator_count))
 for (n,v) in G.successors((iterator,iterator_count)):
 	print("Word=%s Count=%d"%(n,v))
 """
-while graph_terminal==False:
-	#graph_terminal=True
-	max_count=0
-	max_word=""
-	for (n,v) in G.successors((iterator,iterator_count)):
-		if max_count<v  and n!=iterator:
-			max_count=v
-			max_word=n
-			if ((n,v)  in tweet_summary):
-				max_count=0
-				max_word=""
-				graph_termial=True
+max_count=0
+summaries=[]
+for (n,v,const) in G.successors((root,words[root],0)):
+	count=v
+	summary=root+" "+n
+	l=G.successors((n,v,const))
+	while l!=[]:
+		summary=summary+" "+l[0][0]
+		count=count+l[0][1]
+		l=G.successors((l[0][0],l[0][1],l[0][2]))
 		#graph_terminal=False
 	#print ("Word=%s Count=%d"%(max_word,max_count))
 	tweet_summary.append((max_word,max_count))
@@ -191,4 +222,5 @@ while graph_terminal==False:
 	
 for n,v in tweet_summary:
 	print(n,end=" ")
+"""
 print()
