@@ -1,0 +1,9 @@
+Base:2 :: Tsunami warning issued after earthquake off Fukushima in Japan
+Base:3 :: Tsunami warning issued after earthquake off Fukushima in Japan
+Base:4 :: Tsunami warning issued after earthquake off Fukushima in Japan
+Base:5 :: Tsunami warning issued after earthquake off Fukushima in Japan
+Base:6 :: Tsunami warning issued after earthquake off Fukushima in Japan
+Base:7 :: Tsunami warning issued after earthquake off Fukushima in Japan
+Base:8 :: Tsunami warning issued after earthquake off Fukushima in Japan
+Base:9 :: Tsunami warning issued after earthquake off Fukushima in Japan
+Base:10 :: Tsunami warning issued after earthquake off Fukushima in Japan

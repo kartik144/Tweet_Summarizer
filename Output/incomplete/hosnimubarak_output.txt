@@ -1,0 +1,7 @@
+Base:2 :: Twitter Emotion on the trending topic Hosni Mubarak :
+Base:3 :: Twitter Emotion on the trending topic Hosni Mubarak :
+Base:4 :: Twitter Emotion on the trending topic Hosni Mubarak :
+Base:5 :: Hosni Mubarak walks free after six years in jail
+Base:6 :: Hosni Mubarak walks free after six years in jail
+Base:7 :: Hosni Mubarak walks free after six years in jail
+Base:8 :: Hosni Mubarak walks free after six years in jail
