@@ -1,9 +1,9 @@
 Base:2 :: At least 26 dead in attacks in central Paris via
-Base:3 :: Paris news outlets reporting at least 26 dead amid shootings and explosion at three sites. Prayers for Paris.
-Base:4 :: Shootings and blasts kill 18 in Paris: At least 18 people are killed in several deadly shootings in Paris, as ...
-Base:5 :: Shootings and blasts kill 18 in Paris: At least 18 people are killed in several deadly shootings in Paris, as ...
-Base:6 :: Shootings and blasts kill 18 in Paris: At least 18 people are killed in several deadly shootings in Paris, as ...
-Base:7 :: Shootings and blasts kill 18 in Paris: At least 18 people are killed in several deadly shootings in Paris, as ...
-Base:8 :: " UPDATE: Source: 100 hostages in theatre up to 35-40 dead in Paris attacks Thoughts / prayers for Paris
+Base:3 :: " UPDATE: Source: 100 hostages in theatre up to 35-40 dead in Paris attacks Thoughts / prayers for Paris
+Base:4 :: Paris news outlets reporting at least 26 dead amid shootings and explosion at three sites. Prayers for Paris.
+Base:5 :: Paris news outlets reporting at least 26 dead amid shootings and explosion at three sites. Prayers for Paris.
+Base:6 :: Paris news outlets reporting at least 26 dead amid shootings and explosion at three sites. Prayers for Paris.
+Base:7 :: Paris news outlets reporting at least 26 dead amid shootings and explosion at three sites. Prayers for Paris.
+Base:8 :: Paris news outlets reporting at least 26 dead amid shootings and explosion at three sites. Prayers for Paris.
 Base:9 :: Paris news outlets reporting at least 26 dead amid shootings and explosion at three sites. Prayers for Paris.
-Base:10 :: " UPDATE: Source: 100 hostages in theatre up to 35-40 dead in Paris attacks Thoughts / prayers for Paris
+Base:10 :: Paris news outlets reporting at least 26 dead amid shootings and explosion at three sites. Prayers for Paris.

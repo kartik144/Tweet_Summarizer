@@ -1,7 +1,7 @@
 Base:2 :: Multiple fatalities reported in school bus crash
 Base:3 :: UPDATE: 35 students in school bus crash on Talley Rd. bus crash
-Base:4 :: Multiple fatalities reported in school bus crash
-Base:5 :: Police: Bus driver being questioned after at least 23 injured in school bus accident in Chattanooga, Tenn.;
+Base:4 :: UPDATE: 35 students in school bus crash on Talley Rd. bus crash
+Base:5 :: UPDATE: 35 students in school bus crash on Talley Rd. bus crash
 Base:6 :: UPDATE: 35 students in school bus crash on Talley Rd. bus crash
 Base:7 :: UPDATE: 35 students in school bus crash on Talley Rd. bus crash
 Base:8 :: UPDATE: 35 students in school bus crash on Talley Rd. bus crash

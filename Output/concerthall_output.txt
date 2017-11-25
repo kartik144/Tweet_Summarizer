@@ -1,0 +1,9 @@
+Base:2 :: Some hostages escape from concert hall while terrorists reloaded
+Base:3 :: BREAKING: reports 100 hostages at concert hall in ;
+Base:4 :: BREAKING: reports 100 hostages at concert hall in ;
+Base:5 :: BREAKING: reports 100 hostages at concert hall in ;
+Base:6 :: BREAKING: reports 100 hostages at concert hall in ;
+Base:7 :: BREAKING: reports 100 hostages at concert hall in ;
+Base:8 :: BREAKING: reports 100 hostages at concert hall in ;
+Base:9 :: The situation in is horrible, praying for the 100 people who are caught in the concert hall.
+Base:10 :: The situation in is horrible, praying for the 100 people who are caught in the concert hall.

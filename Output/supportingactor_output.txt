@@ -1,0 +1,9 @@
+Base:2 :: &gt;An actor playing a sympathetic communist wins best supporting actor
+Base:3 :: &gt;An actor playing a sympathetic communist wins best supporting actor
+Base:4 :: &gt;An actor playing a sympathetic communist wins best supporting actor
+Base:5 :: &gt;An actor playing a sympathetic communist wins best supporting actor
+Base:6 :: &gt;An actor playing a sympathetic communist wins best supporting actor
+Base:7 :: &gt;An actor playing a sympathetic communist wins best supporting actor
+Base:8 :: &gt;An actor playing a sympathetic communist wins best supporting actor
+Base:9 :: &gt;An actor playing a sympathetic communist wins best supporting actor
+Base:10 :: &gt;An actor playing a sympathetic communist wins best supporting actor

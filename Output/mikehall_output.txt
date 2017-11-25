@@ -3,7 +3,7 @@ Base:3 :: British cyclist Mike Hall killed during race in Australia
 Base:4 :: British cyclist Mike Hall killed during race in Australia
 Base:5 :: British cyclist Mike Hall killed during race in Australia
 Base:6 :: British cyclist Mike Hall killed during race in Australia
-Base:7 :: Condolences go out to the family and friends of Mike Hall. Mike was killed last night after being hit by a car...
-Base:8 :: British cyclist Mike Hall killed during race in Australia
+Base:7 :: British cyclist Mike Hall killed during race in Australia
+Base:8 :: Condolences go out to the family and friends of Mike Hall. Mike was killed last night after being hit by a car...
 Base:9 :: British cyclist Mike Hall killed during race in Australia
 Base:10 :: British cyclist Mike Hall killed during race in Australia

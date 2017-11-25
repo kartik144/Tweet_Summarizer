@@ -1,0 +1,9 @@
+Base:2 :: Borders are closed in France to ensure terrorists won't escape
+Base:3 :: President Hollande declaring state of emergency and closing of French borders.
+Base:4 :: president Instates state of emergency in Curfew in and closing of France's borders.
+Base:5 :: president Instates state of emergency in Curfew in and closing of France's borders.
+Base:6 :: president Instates state of emergency in Curfew in and closing of France's borders.
+Base:7 :: president Instates state of emergency in Curfew in and closing of France's borders.
+Base:8 :: Breaking: In the wake of the Paris attacks President Hollande declares a state of emergency, borders closed
+Base:9 :: Breaking: In the wake of the Paris attacks President Hollande declares a state of emergency, borders closed
+Base:10 :: Breaking: In the wake of the Paris attacks President Hollande declares a state of emergency, borders closed

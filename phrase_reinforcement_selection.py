@@ -124,9 +124,11 @@ for base in range(2,11):
 			#plt.show()
 			edges.clear()
 		edge_data.clear()
-	nx.drawing.nx_pydot.write_dot(G,os.getcwd()+"/Graphs/"+File+"_backward.dot")	
-	print("Writing backward graph for file: %s \t base: %d" % (File,base))	
-	check_call(['dot','-Tps',os.getcwd()+"/Graphs/"+File+"_backward.dot",'-o',os.getcwd()+"/Graphs/"+File+"_backward.ps"])
+		
+		
+	#nx.drawing.nx_pydot.write_dot(G,os.getcwd()+"/Graphs/"+File+"_backward.dot")	
+	#print("Writing backward graph for file: %s \t base: %d" % (File,base))	
+	#check_call(['dot','-Tps',os.getcwd()+"/Graphs/"+File+"_backward.dot",'-o',os.getcwd()+"/Graphs/"+File+"_backward.ps"])
 
 	#nx.draw_networkx(G,edge_color='g',arrows=True)
 	#plt.show()
@@ -213,9 +215,11 @@ for base in range(2,11):
 		edge_data.clear()
 	#nx.draw_networkx(G,edge_color='g',arrows=True)
 	#plt.show()
-	nx.drawing.nx_pydot.write_dot(F,os.getcwd()+"/Graphs/"+File+"_forward.dot")
-	print("Writing forward graph for file: %s\t base: %d" % (File,base))		
-	check_call(['dot','-Tps',os.getcwd()+"/Graphs/"+File+"_forward.dot",'-o',os.getcwd()+"/Graphs/"+File+"_forward.ps"])
+	
+	
+	#nx.drawing.nx_pydot.write_dot(F,os.getcwd()+"/Graphs/"+File+"_forward.dot")
+	#print("Writing forward graph for file: %s\t base: %d" % (File,base))		
+	#check_call(['dot','-Tps',os.getcwd()+"/Graphs/"+File+"_forward.dot",'-o',os.getcwd()+"/Graphs/"+File+"_forward.ps"])
 
 	#iterator=root
 	#iterator_count=words[iterator]

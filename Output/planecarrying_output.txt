@@ -1,0 +1,9 @@
+Base:2 :: Plane carrying a Brazilian football side crashes
+Base:3 :: Plane carrying Brazilian football team Chapecoense crashes in Colombia
+Base:4 :: Plane carrying Brazilian football team Chapecoense crashes in Colombia
+Base:5 :: Plane carrying Brazilian football team Chapecoense crashes in Colombia
+Base:6 :: Plane carrying Brazilian football team Chapecoense crashes in Colombia
+Base:7 :: Plane carrying Brazilian football team Chapecoense crashes in Colombia
+Base:8 :: Plane carrying Brazilian football team Chapecoense crashes in Colombia
+Base:9 :: Plane carrying Brazilian football team Chapecoense crashes in Colombia
+Base:10 :: Plane carrying Brazilian football team Chapecoense crashes in Colombia
